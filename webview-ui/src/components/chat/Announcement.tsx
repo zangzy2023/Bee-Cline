@@ -52,9 +52,9 @@ const Announcement = ({ version, hideAnnouncement }: AnnouncementProps) => {
 					<li>"...manages AWS EC2s": Check server metrics and scale up or down</li>
 					<li>"...pulls PagerDuty incidents": Pulls details to help Cline fix bugs</li>
 				</ul>
-				Cline handles everything from creating the MCP server to installing it in the extension, ready to use in
-				future tasks. The servers are saved to <code>~/Documents/Cline/MCP</code> so you can easily share them
-				with others too.{" "}
+				Cline  处理从创建MCP服务器到将其安装在扩展中的所有内容，准备在
+				未来的任务。服务器保存到<code>~/Documents/Cline/MCP</code> 所以你可以很容易地分享它们
+				也和别人在一起.{" "}
 			</p>
 			<p style={{ margin: "5px 0px" }}>
 				Try it yourself by asking Cline to "add a tool that gets the latest npm docs", or

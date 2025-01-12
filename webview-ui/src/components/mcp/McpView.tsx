@@ -114,13 +114,13 @@ const McpView = ({ onDone }: McpViewProps) => {
 					<VSCodeLink href="https://github.com/modelcontextprotocol" style={{ display: "inline" }}>
 						Model Context Protocol
 					</VSCodeLink>{" "}
-					enables communication with locally running MCP servers that provide additional tools and resources
-					to extend Cline's capabilities. You can use{" "}
+					启用与本地运行的MCP服务器的通信，这些服务器提供额外的工具和资源
+					扩展Cline的能力. 你可以用{" "}
 					<VSCodeLink href="https://github.com/modelcontextprotocol/servers" style={{ display: "inline" }}>
 						community-made servers
 					</VSCodeLink>{" "}
-					or ask Cline to create new tools specific to your workflow (e.g., "add a tool that gets the latest
-					npm docs").
+					或要求Cline创建特定于您的工作流程的新工具 (例如, "添加获取最新信息的工具
+						npm文档").
 				</div>
 
 				<McpEnabledToggle />

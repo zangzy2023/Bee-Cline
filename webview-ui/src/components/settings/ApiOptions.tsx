@@ -154,7 +154,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("apiKey")}
-						placeholder="Enter API Key...">
+						placeholder="输入 API 密钥...">
 						<span style={{ fontWeight: 500 }}>Anthropic API Key</span>
 					</VSCodeTextField>
 
@@ -186,7 +186,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 							marginTop: 3,
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						This key is stored locally and only used to make API requests from this extension.
+						此密钥存储在本地，仅用于从此扩展发出API请求
 						{!apiConfiguration?.apiKey && (
 							<VSCodeLink
 								href="https://console.anthropic.com/settings/keys"
@@ -205,14 +205,14 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("glamaApiKey")}
-						placeholder="Enter API Key...">
+						placeholder="输入 API 密钥...">
 						<span style={{ fontWeight: 500 }}>Glama API Key</span>
 					</VSCodeTextField>
 					{!apiConfiguration?.glamaApiKey && (
 						<VSCodeLink
 							href="https://glama.ai/settings/api-keys"
 							style={{ display: "inline", fontSize: "inherit" }}>
-							You can get an Glama API key by signing up here.
+							您可以通过在此处注册获得 Glama API 密钥.
 						</VSCodeLink>
 					)}
 					<p
@@ -221,7 +221,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 							marginTop: "5px",
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						This key is stored locally and only used to make API requests from this extension.
+						此密钥存储在本地，仅用于从此扩展发出API请求
 					</p>
 				</div>
 			)}
@@ -233,7 +233,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("openAiNativeApiKey")}
-						placeholder="Enter API Key...">
+						placeholder="输入 API 密钥...">
 						<span style={{ fontWeight: 500 }}>OpenAI API Key</span>
 					</VSCodeTextField>
 					<p
@@ -242,12 +242,12 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 							marginTop: 3,
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						This key is stored locally and only used to make API requests from this extension.
+						此密钥存储在本地，仅用于从此扩展发出API请求
 						{!apiConfiguration?.openAiNativeApiKey && (
 							<VSCodeLink
 								href="https://platform.openai.com/api-keys"
 								style={{ display: "inline", fontSize: "inherit" }}>
-								You can get an OpenAI API key by signing up here.
+								您可以通过在此处注册获得 OpenAI API 密钥。
 							</VSCodeLink>
 						)}
 					</p>
@@ -261,7 +261,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("openRouterApiKey")}
-						placeholder="Enter API Key...">
+						placeholder="输入API密钥...">
 						<span style={{ fontWeight: 500 }}>OpenRouter API Key</span>
 					</VSCodeTextField>
 					{!apiConfiguration?.openRouterApiKey && (
@@ -269,7 +269,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 							href={getOpenRouterAuthUrl(uriScheme)}
 							style={{ margin: "5px 0 0 0" }}
 							appearance="secondary">
-							Get OpenRouter API Key
+							获取OpenRout API密钥
 						</VSCodeButtonLink>
 					)}
 					<p
@@ -278,7 +278,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 							marginTop: "5px",
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						This key is stored locally and only used to make API requests from this extension.{" "}
+						此密钥存储在本地，仅用于从此扩展发出API请求{" "}
 						{/* {!apiConfiguration?.openRouterApiKey && (
 							<span style={{ color: "var(--vscode-charts-green)" }}>
 								(<span style={{ fontWeight: 500 }}>Note:</span> OpenRouter is recommended for high rate
@@ -305,7 +305,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("awsAccessKey")}
-						placeholder="Enter Access Key...">
+						placeholder="输入访问密钥...">
 						<span style={{ fontWeight: 500 }}>AWS Access Key</span>
 					</VSCodeTextField>
 					<VSCodeTextField
@@ -313,7 +313,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("awsSecretKey")}
-						placeholder="Enter Secret Key...">
+						placeholder="输入密钥...">
 						<span style={{ fontWeight: 500 }}>AWS Secret Key</span>
 					</VSCodeTextField>
 					<VSCodeTextField
@@ -436,7 +436,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("geminiApiKey")}
-						placeholder="Enter API Key...">
+						placeholder="输入API密钥...">
 						<span style={{ fontWeight: 500 }}>Gemini API Key</span>
 					</VSCodeTextField>
 					<p
@@ -445,7 +445,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 							marginTop: 3,
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						This key is stored locally and only used to make API requests from this extension.
+						此密钥存储在本地，仅用于从此扩展发出API请求
 						{!apiConfiguration?.geminiApiKey && (
 							<VSCodeLink
 								href="https://ai.google.dev/"
@@ -464,7 +464,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 						style={{ width: "100%" }}
 						type="url"
 						onInput={handleInputChange("openAiBaseUrl")}
-						placeholder={"Enter base URL..."}>
+						placeholder={"输入 base URL..."}>
 						<span style={{ fontWeight: 500 }}>Base URL</span>
 					</VSCodeTextField>
 					<VSCodeTextField
@@ -472,7 +472,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("openAiApiKey")}
-						placeholder="Enter API Key...">
+						placeholder="输入API密钥...">
 						<span style={{ fontWeight: 500 }}>API Key</span>
 					</VSCodeTextField>
 					<OpenAiModelPicker />
@@ -486,7 +486,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 									openAiStreamingEnabled: isChecked
 								})
 							}}>
-							Enable streaming
+							启用流式传输
 						</VSCodeCheckbox>
 					</div>
 					<VSCodeCheckbox
@@ -498,7 +498,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 								setApiConfiguration({ ...apiConfiguration, azureApiVersion: "" })
 							}
 						}}>
-						Set Azure API version
+						设置Azure API版本
 					</VSCodeCheckbox>
 					{azureApiVersionSelected && (
 						<VSCodeTextField
@@ -598,7 +598,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 						style={{ width: "100%" }}
 						type="password"
 						onInput={handleInputChange("deepSeekApiKey")}
-						placeholder="Enter API Key...">
+						placeholder="输入API密钥...">
 						<span style={{ fontWeight: 500 }}>DeepSeek API Key</span>
 					</VSCodeTextField>
 					<p
@@ -607,7 +607,7 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 							marginTop: "5px",
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						This key is stored locally and only used to make API requests from this extension.
+						此密钥存储在本地，仅用于从此扩展发出API请求
 						{!apiConfiguration?.deepSeekApiKey && (
 							<VSCodeLink
 								href="https://platform.deepseek.com/"
@@ -676,8 +676,8 @@ const ApiOptions = ({ apiErrorMessage, modelIdErrorMessage }: ApiOptionsProps) =
 							quickstart guide.
 						</VSCodeLink>
 						<span style={{ color: "var(--vscode-errorForeground)" }}>
-							(<span style={{ fontWeight: 500 }}>Note:</span> Cline uses complex prompts and works best
-							with Claude models. Less capable models may not work as expected.)
+							(<span style={{ fontWeight: 500 }}>Note:</span> Cline使用复杂的提示并且效果最好
+								使用Claude models。能力较低的models可能无法按预期工作.)
 						</span>
 					</p>
 				</div>
@@ -777,48 +777,48 @@ export const ModelInfoView = ({
 		<ModelInfoSupportsItem
 			key="supportsImages"
 			isSupported={modelInfo.supportsImages ?? false}
-			supportsLabel="Supports images"
-			doesNotSupportLabel="Does not support images"
+			supportsLabel="支持图像"
+			doesNotSupportLabel="不支持图像"
 		/>,
 		<ModelInfoSupportsItem
 			key="supportsComputerUse"
 			isSupported={modelInfo.supportsComputerUse ?? false}
-			supportsLabel="Supports computer use"
-			doesNotSupportLabel="Does not support computer use"
+			supportsLabel="支持电脑使用"
+			doesNotSupportLabel="不支持电脑使用"
 		/>,
 		!isGemini && (
 			<ModelInfoSupportsItem
 				key="supportsPromptCache"
 				isSupported={modelInfo.supportsPromptCache}
-				supportsLabel="Supports prompt caching"
-				doesNotSupportLabel="Does not support prompt caching"
+				supportsLabel="支持提示缓存"
+				doesNotSupportLabel="不支持提示缓存"
 			/>
 		),
 		modelInfo.maxTokens !== undefined && modelInfo.maxTokens > 0 && (
 			<span key="maxTokens">
-				<span style={{ fontWeight: 500 }}>Max output:</span> {modelInfo.maxTokens?.toLocaleString()} tokens
+				<span style={{ fontWeight: 500 }}>最大输出:</span> {modelInfo.maxTokens?.toLocaleString()} tokens
 			</span>
 		),
 		modelInfo.inputPrice !== undefined && modelInfo.inputPrice > 0 && (
 			<span key="inputPrice">
-				<span style={{ fontWeight: 500 }}>Input price:</span> {formatPrice(modelInfo.inputPrice)}/million tokens
+				<span style={{ fontWeight: 500 }}>输入价格:</span> {formatPrice(modelInfo.inputPrice)}/million tokens
 			</span>
 		),
 		modelInfo.supportsPromptCache && modelInfo.cacheWritesPrice && (
 			<span key="cacheWritesPrice">
-				<span style={{ fontWeight: 500 }}>Cache writes price:</span>{" "}
+				<span style={{ fontWeight: 500 }}>缓存写入价格:</span>{" "}
 				{formatPrice(modelInfo.cacheWritesPrice || 0)}/million tokens
 			</span>
 		),
 		modelInfo.supportsPromptCache && modelInfo.cacheReadsPrice && (
 			<span key="cacheReadsPrice">
-				<span style={{ fontWeight: 500 }}>Cache reads price:</span>{" "}
+				<span style={{ fontWeight: 500 }}>缓存读取价格:</span>{" "}
 				{formatPrice(modelInfo.cacheReadsPrice || 0)}/million tokens
 			</span>
 		),
 		modelInfo.outputPrice !== undefined && modelInfo.outputPrice > 0 && (
 			<span key="outputPrice">
-				<span style={{ fontWeight: 500 }}>Output price:</span> {formatPrice(modelInfo.outputPrice)}/million
+				<span style={{ fontWeight: 500 }}>输出价格：:</span> {formatPrice(modelInfo.outputPrice)}/million
 				tokens
 			</span>
 		),

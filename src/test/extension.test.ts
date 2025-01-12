@@ -8,16 +8,16 @@ const dotenv = require('dotenv');
 const testEnvPath = path.join(__dirname, '.test_env');
 dotenv.config({ path: testEnvPath });
 
-suite('Roo Cline Extension Test Suite', () => {
-	vscode.window.showInformationMessage('Starting Roo Cline extension tests.');
+suite('Bee Cline Extension Test Suite', () => {
+	vscode.window.showInformationMessage('Starting Bee Cline extension tests.');
 
 	test('Extension should be present', () => {
-		const extension = vscode.extensions.getExtension('RooVeterinaryInc.roo-cline');
+		const extension = vscode.extensions.getExtension('RooVeterinaryInc.bee-cline');
 		assert.notStrictEqual(extension, undefined);
 	});
 
 	test('Extension should activate', async () => {
-		const extension = vscode.extensions.getExtension('RooVeterinaryInc.roo-cline');
+		const extension = vscode.extensions.getExtension('RooVeterinaryInc.bee-cline');
 		if (!extension) {
 			assert.fail('Extension not found');
 		}
@@ -32,7 +32,7 @@ suite('Roo Cline Extension Test Suite', () => {
 		(async () => {
 			try {
 				// Get extension instance
-				const extension = vscode.extensions.getExtension('RooVeterinaryInc.roo-cline');
+				const extension = vscode.extensions.getExtension('RooVeterinaryInc.bee-cline');
 				if (!extension) {
 					done(new Error('Extension not found'));
 					return;
@@ -123,12 +123,12 @@ suite('Roo Cline Extension Test Suite', () => {
 		
 		// Test core commands are registered
 		const expectedCommands = [
-			'roo-cline.plusButtonClicked',
-			'roo-cline.mcpButtonClicked', 
-			'roo-cline.historyButtonClicked',
-			'roo-cline.popoutButtonClicked',
-			'roo-cline.settingsButtonClicked',
-			'roo-cline.openInNewTab'
+			'bee-cline.plusButtonClicked',
+			'bee-cline.mcpButtonClicked', 
+			'bee-cline.historyButtonClicked',
+			'bee-cline.popoutButtonClicked',
+			'bee-cline.settingsButtonClicked',
+			'bee-cline.openInNewTab'
 		];
 
 		for (const cmd of expectedCommands) {
@@ -142,8 +142,8 @@ suite('Roo Cline Extension Test Suite', () => {
 
 	test('Views should be registered', () => {
 		const view = vscode.window.createWebviewPanel(
-			'roo-cline.SidebarProvider',
-			'Roo Cline',
+			'bee-cline.SidebarProvider',
+			'Bee Cline',
 			vscode.ViewColumn.One,
 			{}
 		);
@@ -159,7 +159,7 @@ suite('Roo Cline Extension Test Suite', () => {
 		const interval = 1000;
 
 		// Get extension instance
-		const extension = vscode.extensions.getExtension('RooVeterinaryInc.roo-cline');
+		const extension = vscode.extensions.getExtension('RooVeterinaryInc.bee-cline');
 		if (!extension) {
 			assert.fail('Extension not found');
 			return;
@@ -192,8 +192,8 @@ suite('Roo Cline Extension Test Suite', () => {
 		// Create webview panel with development options
 		const extensionUri = extension.extensionUri;
 		const panel = vscode.window.createWebviewPanel(
-			'roo-cline.SidebarProvider',
-			'Roo Cline',
+			'bee-cline.SidebarProvider',
+			'Bee Cline',
 			vscode.ViewColumn.One,
 			{
 				enableScripts: true,

@@ -201,9 +201,9 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 
 				<div style={{ marginBottom: 5 }}>
 					<div style={{ marginBottom: 15 }}>
-						<h3 style={{ color: "var(--vscode-foreground)", margin: 0, marginBottom: 15 }}>Agent Settings</h3>
+						<h3 style={{ color: "var(--vscode-foreground)", margin: 0, marginBottom: 15 }}>Agent（智能体） 设置</h3>
 
-						<label style={{ fontWeight: "500", display: "block", marginBottom: 5 }}>Preferred Language</label>
+						<label style={{ fontWeight: "500", display: "block", marginBottom: 5 }}>首选语言</label>
 						<select
 							value={preferredLanguage}
 							onChange={(e) => setPreferredLanguage(e.target.value)}
@@ -240,7 +240,7 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 							marginTop: "5px",
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-							Select the language that Cline should use for communication.
+							选择Cline应该用于交流的语言.
 						</p>
 					</div>
 
@@ -260,7 +260,7 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 							marginTop: "5px",
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						These instructions are added to the end of the system prompt sent with every request. Custom instructions set in .clinerules and .cursorrules in the working directory are also included.
+						这些指令被添加到与每个请求一起发送的系统提示符的末尾. 自定义指令设置在 .clinerules 和 .cursorrules 在工作目录中也包括在内.
 					</p>
 
 					<McpEnabledToggle />
@@ -338,7 +338,7 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 					<VSCodeCheckbox
 						checked={alwaysAllowReadOnly}
 						onChange={(e: any) => setAlwaysAllowReadOnly(e.target.checked)}>
-						<span style={{ fontWeight: "500" }}>Always approve read-only operations</span>
+						<span style={{ fontWeight: "500" }}>始终批准只读操作</span>
 					</VSCodeCheckbox>
 					<p
 						style={{
@@ -346,26 +346,26 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 							marginTop: "5px",
 							color: "var(--vscode-descriptionForeground)",
 						}}>
-						When enabled, Cline will automatically view directory contents and read files without requiring
-						you to click the Approve button.
+						启用后，Cline将自动查看目录内容并读取文件，而无需
+						您单击批准按钮。
 					</p>
 				</div>
 
 				<div style={{ marginBottom: 15, border: "2px solid var(--vscode-errorForeground)", borderRadius: "4px", padding: "10px" }}>
-					<h4 style={{ fontWeight: 500, margin: "0 0 10px 0", color: "var(--vscode-errorForeground)" }}>⚠️ High-Risk Auto-Approve Settings</h4>
+					<h4 style={{ fontWeight: 500, margin: "0 0 10px 0", color: "var(--vscode-errorForeground)" }}>⚠️ 高风险自动批准设置</h4>
 					<p style={{ fontSize: "12px", marginBottom: 15, color: "var(--vscode-descriptionForeground)" }}>
-						The following settings allow Cline to automatically perform potentially dangerous operations without requiring approval.
-						Enable these settings only if you fully trust the AI and understand the associated security risks.
+					以下设置允许Cline自动执行潜在危险的操作，而无需批准。
+					仅当您完全信任AI并了解相关的安全风险时，才启用这些设置。
 					</p>
 
 					<div style={{ marginBottom: 5 }}>
 						<VSCodeCheckbox
 							checked={alwaysAllowWrite}
 							onChange={(e: any) => setAlwaysAllowWrite(e.target.checked)}>
-							<span style={{ fontWeight: "500" }}>Always approve write operations</span>
+							<span style={{ fontWeight: "500" }}>始终批准写入操作</span>
 						</VSCodeCheckbox>
 						<p style={{ fontSize: "12px", marginTop: "5px", color: "var(--vscode-descriptionForeground)" }}>
-							Automatically create and edit files without requiring approval
+						无需批准即可自动创建和编辑文件
 						</p>
 						{alwaysAllowWrite && (
 							<div style={{ marginTop: 10 }}>
@@ -388,7 +388,7 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 									</span>
 								</div>
 								<p style={{ fontSize: "12px", marginTop: "5px", color: "var(--vscode-descriptionForeground)" }}>
-									Delay after writes to allow diagnostics to detect potential problems
+								写入后延迟以允许诊断检测潜在问题
 								</p>
 							</div>
 						)}
@@ -398,10 +398,10 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 						<VSCodeCheckbox
 							checked={alwaysAllowBrowser}
 							onChange={(e: any) => setAlwaysAllowBrowser(e.target.checked)}>
-							<span style={{ fontWeight: "500" }}>Always approve browser actions</span>
+							<span style={{ fontWeight: "500" }}>始终批准浏览器操作</span>
 						</VSCodeCheckbox>
 						<p style={{ fontSize: "12px", marginTop: "5px", color: "var(--vscode-descriptionForeground)" }}>
-							Automatically perform browser actions without requiring approval<br />
+						    无需批准即可自动执行浏览器操作<br />
 							Note: Only applies when the model supports computer use
 						</p>
 					</div>
@@ -410,10 +410,10 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 						<VSCodeCheckbox
 							checked={alwaysApproveResubmit}
 							onChange={(e: any) => setAlwaysApproveResubmit(e.target.checked)}>
-							<span style={{ fontWeight: "500" }}>Always retry failed API requests</span>
+							<span style={{ fontWeight: "500" }}>总是重试失败的API请求</span>
 						</VSCodeCheckbox>
 						<p style={{ fontSize: "12px", marginTop: "5px", color: "var(--vscode-descriptionForeground)" }}>
-							Automatically retry failed API requests when server returns an error response
+						当服务器返回错误响应时自动重试失败的API请求
 						</p>
 						{alwaysApproveResubmit && (
 							<div style={{ marginTop: 10 }}>
@@ -436,7 +436,7 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 									</span>
 								</div>
 								<p style={{ fontSize: "12px", marginTop: "5px", color: "var(--vscode-descriptionForeground)" }}>
-									Delay before retrying the request
+								重试请求前的延迟
 								</p>
 							</div>
 						)}
@@ -446,7 +446,7 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 						<VSCodeCheckbox
 							checked={alwaysAllowMcp}
 							onChange={(e: any) => setAlwaysAllowMcp(e.target.checked)}>
-							<span style={{ fontWeight: "500" }}>Always approve MCP tools</span>
+							<span style={{ fontWeight: "500" }}>始终批准MCP工具</span>
 						</VSCodeCheckbox>
 						<p style={{ fontSize: "12px", marginTop: "5px", color: "var(--vscode-descriptionForeground)" }}>
 							Enable auto-approval of individual MCP tools in the MCP Servers view (requires both this setting and the tool's individual "Always allow" checkbox)
@@ -457,21 +457,21 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 						<VSCodeCheckbox
 							checked={alwaysAllowExecute}
 							onChange={(e: any) => setAlwaysAllowExecute(e.target.checked)}>
-							<span style={{ fontWeight: "500" }}>Always approve allowed execute operations</span>
+							<span style={{ fontWeight: "500" }}>始终批准允许的执行操作</span>
 						</VSCodeCheckbox>
 						<p style={{ fontSize: "12px", marginTop: "5px", color: "var(--vscode-descriptionForeground)" }}>
-							Automatically execute allowed terminal commands without requiring approval
+						无需批准即可自动执行允许的终端命令
 						</p>
 
 						{alwaysAllowExecute && (
 							<div style={{ marginTop: 10 }}>
-								<span style={{ fontWeight: "500" }}>Allowed Auto-Execute Commands</span>
+								<span style={{ fontWeight: "500" }}>允许的自动执行命令</span>
 								<p style={{
 									fontSize: "12px",
 									marginTop: "5px",
 									color: "var(--vscode-descriptionForeground)",
 								}}>
-									Command prefixes that can be auto-executed when "Always approve execute operations" is enabled.
+									启用“始终批准执行操作”时可以自动执行的命令前缀。
 								</p>
 
 								<div style={{ display: 'flex', gap: '5px', marginTop: '10px' }}>
@@ -544,8 +544,8 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 				<div style={{ marginBottom: 5 }}>
 					<div style={{ marginBottom: 10 }}>
 						<div style={{ marginBottom: 15 }}>
-							<h3 style={{ color: "var(--vscode-foreground)", margin: 0, marginBottom: 15 }}>Browser Settings</h3>
-							<label style={{ fontWeight: "500", display: "block", marginBottom: 5 }}>Viewport size</label>
+							<h3 style={{ color: "var(--vscode-foreground)", margin: 0, marginBottom: 15 }}>浏览器设置</h3>
+							<label style={{ fontWeight: "500", display: "block", marginBottom: 5 }}>视口大小</label>
 							<select
 								value={browserViewportSize}
 								onChange={(e) => setBrowserViewportSize(e.target.value)}
@@ -568,13 +568,13 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 								marginTop: "5px",
 								color: "var(--vscode-descriptionForeground)",
 							}}>
-								Select the viewport size for browser interactions. This affects how websites are displayed and interacted with.
+								选择浏览器交互的视口大小。这会影响网站的显示和交互方式.
 							</p>
 						</div>
 
 						<div style={{ marginBottom: 15 }}>
 							<div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-								<span style={{ fontWeight: "500", minWidth: '100px' }}>Screenshot quality</span>
+								<span style={{ fontWeight: "500", minWidth: '100px' }}>截图质量</span>
 								<input
 									type="range"
 									min="1"
@@ -597,16 +597,16 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 								marginTop: "5px",
 								color: "var(--vscode-descriptionForeground)",
 							}}>
-								Adjust the WebP quality of browser screenshots. Higher values provide clearer screenshots but increase token usage.
+								调整浏览器屏幕截图的WebP质量。更高的值提供更清晰的屏幕截图，但增加了令牌的使用。.
 							</p>
 						</div>
 					</div>
 
 					<div style={{ marginBottom: 5 }}>
 						<div style={{ marginBottom: 10 }}>
-							<h3 style={{ color: "var(--vscode-foreground)", margin: 0, marginBottom: 15 }}>Notification Settings</h3>
+							<h3 style={{ color: "var(--vscode-foreground)", margin: 0, marginBottom: 15 }}>通知设置</h3>
 							<VSCodeCheckbox checked={soundEnabled} onChange={(e: any) => setSoundEnabled(e.target.checked)}>
-								<span style={{ fontWeight: "500" }}>Enable sound effects</span>
+								<span style={{ fontWeight: "500" }}>启用音效</span>
 							</VSCodeCheckbox>
 							<p
 								style={{
@@ -614,7 +614,7 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 									marginTop: "5px",
 									color: "var(--vscode-descriptionForeground)",
 								}}>
-								When enabled, Cline will play sound effects for notifications and events.
+								启用后，Cline将为通知和事件播放音效.
 							</p>
 						</div>
 						{soundEnabled && (
@@ -672,8 +672,8 @@ const SettingsView = ({ onDone }: SettingsViewProps) => {
 					}}>
 					<p style={{ wordWrap: "break-word", margin: 0, padding: 0 }}>
 						If you have any questions or feedback, feel free to open an issue at{" "}
-						<VSCodeLink href="https://github.com/RooVetGit/Roo-Cline" style={{ display: "inline" }}>
-							https://github.com/RooVetGit/Roo-Cline
+						<VSCodeLink href="https://github.com/RooVetGit/Bee-Cline" style={{ display: "inline" }}>
+							https://github.com/RooVetGit/Bee-Cline
 						</VSCodeLink>
 					</p>
 					<p style={{ fontStyle: "italic", margin: "10px 0 0 0", padding: 0 }}>v{version}</p>

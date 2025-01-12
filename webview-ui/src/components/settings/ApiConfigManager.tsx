@@ -91,7 +91,7 @@ const ApiConfigManager = ({
                             ref={inputRef as any}
                             value={inputValue}
                             onInput={(e: any) => setInputValue(e.target.value)}
-                            placeholder={editState === 'new' ? "Enter profile name" : "Enter new name"}
+                            placeholder={editState === 'new' ? "输入配置名" : "输入新配置名"}
                             style={{ flexGrow: 1 }}
                             onKeyDown={(e: any) => {
                                 if (e.key === 'Enter' && inputValue.trim()) {
@@ -163,7 +163,7 @@ const ApiConfigManager = ({
                             <VSCodeButton
                                 appearance="icon"
                                 onClick={handleAdd}
-                                title="Add profile"
+                                title="添加配置"
                                 style={{
                                     padding: 0,
                                     margin: 0,
@@ -179,7 +179,7 @@ const ApiConfigManager = ({
                                     <VSCodeButton
                                         appearance="icon"
                                         onClick={handleStartRename}
-                                        title="Rename profile"
+                                        title="重命名配置文件"
                                         style={{
                                             padding: 0,
                                             margin: 0,
@@ -193,7 +193,7 @@ const ApiConfigManager = ({
                                     <VSCodeButton
                                         appearance="icon"
                                         onClick={handleDelete}
-                                        title={isOnlyProfile ? "Cannot delete the only profile" : "Delete profile"}
+                                        title={isOnlyProfile ? "无法删除唯一的配置文件" : "删除配置"}
                                         disabled={isOnlyProfile}
                                         style={{
                                             padding: 0,
@@ -213,7 +213,7 @@ const ApiConfigManager = ({
                             margin: "5px 0 12px",
                             color: "var(--vscode-descriptionForeground)"
                         }}>
-                            Save different API configurations to quickly switch between providers and settings
+                            保存不同的API配置以在提供程序和设置之间快速切换
                         </p>
                     </>
                 )}
