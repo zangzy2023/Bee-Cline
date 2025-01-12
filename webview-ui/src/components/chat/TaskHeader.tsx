@@ -149,7 +149,7 @@ const TaskHeader: React.FC<TaskHeaderProps> = ({
 								flexGrow: 1,
 								minWidth: 0, // This allows the div to shrink below its content size
 							}}>
-							<span style={{ fontWeight: "bold" }}>Task{!isTaskExpanded && ":"}</span>
+							<span style={{ fontWeight: "bold" }}>任务{!isTaskExpanded && "："}</span>
 							{!isTaskExpanded && (
 								<span style={{ marginLeft: 4 }}>{highlightMentions(task.text, false)}</span>
 							)}
@@ -226,7 +226,7 @@ const TaskHeader: React.FC<TaskHeaderProps> = ({
 											backgroundColor: "var(--vscode-badge-background)",
 										}}
 										onClick={() => setIsTextExpanded(!isTextExpanded)}>
-										See more
+										查看更多
 									</div>
 								</div>
 							)}
@@ -241,7 +241,7 @@ const TaskHeader: React.FC<TaskHeaderProps> = ({
 									paddingRight: 2,
 								}}
 								onClick={() => setIsTextExpanded(!isTextExpanded)}>
-								See less
+								收起
 							</div>
 						)}
 						{task.images && task.images.length > 0 && <Thumbnails images={task.images} />}
@@ -253,7 +253,7 @@ const TaskHeader: React.FC<TaskHeaderProps> = ({
 									alignItems: "center",
 								}}>
 								<div style={{ display: "flex", alignItems: "center", gap: "4px", flexWrap: "wrap" }}>
-									<span style={{ fontWeight: "bold" }}>Tokens:</span>
+									<span style={{ fontWeight: "bold" }}>令牌数：</span>
 									<span style={{ display: "flex", alignItems: "center", gap: "3px" }}>
 										<i
 											className="codicon codicon-arrow-up"
@@ -274,7 +274,7 @@ const TaskHeader: React.FC<TaskHeaderProps> = ({
 
 							{shouldShowPromptCacheInfo && (cacheReads !== undefined || cacheWrites !== undefined) && (
 								<div style={{ display: "flex", alignItems: "center", gap: "4px", flexWrap: "wrap" }}>
-									<span style={{ fontWeight: "bold" }}>Cache:</span>
+									<span style={{ fontWeight: "bold" }}>缓存：</span>
 									<span style={{ display: "flex", alignItems: "center", gap: "3px" }}>
 										<i
 											className="codicon codicon-database"
@@ -299,7 +299,7 @@ const TaskHeader: React.FC<TaskHeaderProps> = ({
 										alignItems: "center",
 									}}>
 									<div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-										<span style={{ fontWeight: "bold" }}>API Cost:</span>
+										<span style={{ fontWeight: "bold" }}>API 费用：</span>
 										<span>${totalCost?.toFixed(4)}</span>
 									</div>
 									<ExportButton />
@@ -373,7 +373,7 @@ const ExportButton = () => (
 				// marginRight: "-2.5px",
 			}
 		}>
-		<div style={{ fontSize: "10.5px", fontWeight: "bold", opacity: 0.6 }}>EXPORT</div>
+		<div style={{ fontSize: "10.5px", fontWeight: "bold", opacity: 0.6 }}>导出</div>
 	</VSCodeButton>
 )
 

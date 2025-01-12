@@ -119,7 +119,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 					}
 					vscode.postMessage(message)
 				} else {
-					const promptDescription = "The 'Enhance Prompt' button helps improve your prompt by providing additional context, clarification, or rephrasing. Try typing a prompt in here and clicking the button again to see how it works."
+					const promptDescription = " '增强提示' 按钮 通过提供额外的上下文、澄清或重新措辞来帮助改进您的提示。尝试在此处输入提示并再次单击按钮以查看它是如何工作的."
 					setInputValue(promptDescription)
 				}
 			}
@@ -518,7 +518,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 							const reader = new FileReader()
 							reader.onloadend = () => {
 								if (reader.error) {
-									console.error("Error reading file:", reader.error)
+									console.error("读取文件时出错:", reader.error)
 									resolve(null)
 								} else {
 									const result = reader.result
@@ -721,7 +721,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 				  <span style={{ display: "flex", alignItems: "center", gap: 12 }}>
 					{apiConfiguration?.apiProvider === "openrouter" && (
 					  <div style={{ display: "flex", alignItems: "center" }}>
-						{isEnhancingPrompt && <span style={{ marginRight: 10, color: "var(--vscode-input-foreground)", opacity: 0.5 }}>Enhancing prompt...</span>}
+						{isEnhancingPrompt && <span style={{ marginRight: 10, color: "var(--vscode-input-foreground)", opacity: 0.5 }}>增强提示...</span>}
 						<span
 						  role="button"
 						  aria-label="enhance prompt"

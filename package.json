@@ -1,8 +1,8 @@
 {
-  "name": "roo-cline",
-  "displayName": "Roo Cline",
-  "description": "A fork of Cline, an autonomous coding agent, with some added experimental configuration and automation features.",
-  "publisher": "RooVeterinaryInc",
+  "name": "bee-cline",
+  "displayName": "Bee Cline",
+  "description": "Roo-Cline的一个分支，一种自主编码代理，具有中文支持和一些附加的实验功能.",
+  "publisher": "Zangzy2023",
   "version": "2.2.46",
   "icon": "assets/icons/rocket.png",
   "galleryBanner": {
@@ -17,9 +17,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/RooVetGit/Roo-Cline"
+    "url": "https://github.com/zangzy2023/Bee-Cline"
   },
-  "homepage": "https://github.com/RooVetGit/Roo-Cline",
+  "homepage": "https://github.com/zangzy2023/Bee-Cline",
   "categories": [
     "AI",
     "Chat",
@@ -48,86 +48,86 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "roo-cline-ActivityBar",
-          "title": "Roo Cline",
+          "id": "bee-cline-ActivityBar",
+          "title": "Bee Cline",
           "icon": "$(rocket)"
         }
       ]
     },
     "views": {
-      "roo-cline-ActivityBar": [
+      "bee-cline-ActivityBar": [
         {
           "type": "webview",
-          "id": "roo-cline.SidebarProvider",
+          "id": "bee-cline.SidebarProvider",
           "name": ""
         }
       ]
     },
     "commands": [
       {
-        "command": "roo-cline.plusButtonClicked",
-        "title": "New Task",
+        "command": "bee-cline.plusButtonClicked",
+        "title": "新建任务",
         "icon": "$(add)"
       },
       {
-        "command": "roo-cline.mcpButtonClicked",
-        "title": "MCP Servers",
+        "command": "bee-cline.mcpButtonClicked",
+        "title": "MCP服务器",
         "icon": "$(server)"
       },
       {
-        "command": "roo-cline.historyButtonClicked",
-        "title": "History",
+        "command": "bee-cline.historyButtonClicked",
+        "title": "历史记录",
         "icon": "$(history)"
       },
       {
-        "command": "roo-cline.popoutButtonClicked",
-        "title": "Open in Editor",
+        "command": "bee-cline.popoutButtonClicked",
+        "title": "在编辑器中打开",
         "icon": "$(link-external)"
       },
       {
-        "command": "roo-cline.settingsButtonClicked",
-        "title": "Settings",
+        "command": "bee-cline.settingsButtonClicked",
+        "title": "设置",
         "icon": "$(settings-gear)"
       },
       {
-        "command": "roo-cline.openInNewTab",
-        "title": "Open In New Tab",
-        "category": "Roo Cline"
+        "command": "bee-cline.openInNewTab",
+        "title": "在新标签页中打开",
+        "category": "Bee Cline"
       }
     ],
     "menus": {
       "view/title": [
         {
-          "command": "roo-cline.plusButtonClicked",
+          "command": "bee-cline.plusButtonClicked",
           "group": "navigation@1",
-          "when": "view == roo-cline.SidebarProvider"
+          "when": "view == bee-cline.SidebarProvider"
         },
         {
-          "command": "roo-cline.mcpButtonClicked",
+          "command": "bee-cline.mcpButtonClicked",
           "group": "navigation@2",
-          "when": "view == roo-cline.SidebarProvider"
+          "when": "view == bee-cline.SidebarProvider"
         },
         {
-          "command": "roo-cline.historyButtonClicked",
+          "command": "bee-cline.historyButtonClicked",
           "group": "navigation@3",
-          "when": "view == roo-cline.SidebarProvider"
+          "when": "view == bee-cline.SidebarProvider"
         },
         {
-          "command": "roo-cline.popoutButtonClicked",
+          "command": "bee-cline.popoutButtonClicked",
           "group": "navigation@4",
-          "when": "view == roo-cline.SidebarProvider"
+          "when": "view == bee-cline.SidebarProvider"
         },
         {
-          "command": "roo-cline.settingsButtonClicked",
+          "command": "bee-cline.settingsButtonClicked",
           "group": "navigation@5",
-          "when": "view == roo-cline.SidebarProvider"
+          "when": "view == bee-cline.SidebarProvider"
         }
       ]
     },
     "configuration": {
-      "title": "RooCline",
+      "title": "Bee Cline",
       "properties": {
-        "roo-cline.allowedCommands": {
+        "bee-cline.allowedCommands": {
           "type": "array",
           "items": {
             "type": "string"
@@ -140,7 +140,7 @@
             "git diff",
             "git show"
           ],
-          "description": "Commands that can be auto-executed when 'Always approve execute operations' is enabled"
+          "description": "启用“始终批准执行操作”时可以自动执行的命令"
         }
       }
     }
@@ -226,10 +226,10 @@
     "serialize-error": "^11.0.3",
     "sound-play": "^1.1.0",
     "strip-ansi": "^7.1.0",
-    "tree-sitter-wasms": "^0.1.11",
+    "tree-sitter-wasms": "^0.1.12",
     "turndown": "^7.2.0",
     "web-tree-sitter": "^0.22.6",
-    "zod": "^3.23.8"
+    "zod": "^3.24.1"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [

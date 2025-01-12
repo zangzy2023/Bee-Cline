@@ -28,7 +28,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	// Get default commands from configuration
 	const defaultCommands = vscode.workspace
-		.getConfiguration('roo-cline')
+		.getConfiguration('bee-cline')
 		.get<string[]>('allowedCommands') || [];
 
 	// Initialize global state if not already set
@@ -45,7 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
 	)
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand("roo-cline.plusButtonClicked", async () => {
+		vscode.commands.registerCommand("bee-cline.plusButtonClicked", async () => {
 			outputChannel.appendLine("Plus button Clicked")
 			await sidebarProvider.clearTask()
 			await sidebarProvider.postStateToWebview()
@@ -54,7 +54,7 @@ export function activate(context: vscode.ExtensionContext) {
 	)
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand("roo-cline.mcpButtonClicked", () => {
+		vscode.commands.registerCommand("bee-cline.mcpButtonClicked", () => {
 			sidebarProvider.postMessageToWebview({ type: "action", action: "mcpButtonClicked" })
 		}),
 	)
@@ -92,18 +92,18 @@ export function activate(context: vscode.ExtensionContext) {
 		await vscode.commands.executeCommand("workbench.action.lockEditorGroup")
 	}
 
-	context.subscriptions.push(vscode.commands.registerCommand("roo-cline.popoutButtonClicked", openClineInNewTab))
-	context.subscriptions.push(vscode.commands.registerCommand("roo-cline.openInNewTab", openClineInNewTab))
+	context.subscriptions.push(vscode.commands.registerCommand("bee-cline.popoutButtonClicked", openClineInNewTab))
+	context.subscriptions.push(vscode.commands.registerCommand("bee-cline.openInNewTab", openClineInNewTab))
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand("roo-cline.settingsButtonClicked", () => {
+		vscode.commands.registerCommand("bee-cline.settingsButtonClicked", () => {
 			//vscode.window.showInformationMessage(message)
 			sidebarProvider.postMessageToWebview({ type: "action", action: "settingsButtonClicked" })
 		}),
 	)
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand("roo-cline.historyButtonClicked", () => {
+		vscode.commands.registerCommand("bee-cline.historyButtonClicked", () => {
 			sidebarProvider.postMessageToWebview({ type: "action", action: "historyButtonClicked" })
 		}),
 	)

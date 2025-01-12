@@ -7,7 +7,7 @@ coverage/
 
 # Builds
 bin/
-roo-cline-*.vsix
+bee-cline-*.vsix
 
 # Local prompts and rules
 /local-prompts

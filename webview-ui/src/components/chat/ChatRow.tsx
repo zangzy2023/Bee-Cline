@@ -289,7 +289,7 @@ export const ChatRowContent = ({
 						<div style={headerStyle}>
 							{toolIcon("file-code")}
 							<span style={{ fontWeight: "bold" }}>
-								{message.type === "ask" ? "Cline wants to read this file:" : "Cline read this file:"}
+								{message.type === "ask" ? "Cline 要读取此文件:" : "Cline 读取此文件:"}
 							</span>
 						</div>
 						{/* <CodeAccordian
@@ -347,8 +347,8 @@ export const ChatRowContent = ({
 							{toolIcon("folder-opened")}
 							<span style={{ fontWeight: "bold" }}>
 								{message.type === "ask"
-									? "Cline wants to view the top level files in this directory:"
-									: "Cline viewed the top level files in this directory:"}
+									? "Cline 想要查看此目录中的顶级文件:"
+									: "Cline 查看此目录中的顶级文件:"}
 							</span>
 						</div>
 						<CodeAccordian
@@ -367,8 +367,8 @@ export const ChatRowContent = ({
 							{toolIcon("folder-opened")}
 							<span style={{ fontWeight: "bold" }}>
 								{message.type === "ask"
-									? "Cline wants to recursively view all files in this directory:"
-									: "Cline recursively viewed all files in this directory:"}
+									? "Cline 想要递归查看此目录中的所有文件:"
+									: "Cline 递归查看了此目录中的所有文件:"}
 							</span>
 						</div>
 						<CodeAccordian
@@ -387,8 +387,8 @@ export const ChatRowContent = ({
 							{toolIcon("file-code")}
 							<span style={{ fontWeight: "bold" }}>
 								{message.type === "ask"
-									? "Cline wants to view source code definition names used in this directory:"
-									: "Cline viewed source code definition names used in this directory:"}
+									? "Cline 想查看此目录中使用的源代码定义名称:"
+									: "Cline 查看了此目录中使用的源代码定义名称:"}
 							</span>
 						</div>
 						<CodeAccordian
@@ -407,11 +407,11 @@ export const ChatRowContent = ({
 							<span style={{ fontWeight: "bold" }}>
 								{message.type === "ask" ? (
 									<>
-										Cline wants to search this directory for <code>{tool.regex}</code>:
+										Cline 想要搜索此目录 <code>{tool.regex}</code>:
 									</>
 								) : (
 									<>
-										Cline searched this directory for <code>{tool.regex}</code>:
+										Cline 搜索了此目录 <code>{tool.regex}</code>:
 									</>
 								)}
 							</span>
@@ -498,7 +498,7 @@ export const ChatRowContent = ({
 												<a
 													href="https://github.com/cline/cline/wiki/TroubleShooting-%E2%80%90-%22PowerShell-is-not-recognized-as-an-internal-or-external-command%22"
 													style={{ color: "inherit", textDecoration: "underline" }}>
-													troubleshooting guide
+													故障排除指南
 												</a>
 												.
 											</>
@@ -664,14 +664,14 @@ export const ChatRowContent = ({
 									</span>
 								</div>
 								<div>
-									Cline won't be able to view the command's output. Please update VSCode (
-									<code>CMD/CTRL + Shift + P</code> → "Update") and make sure you're using a supported
+									Cline 将无法查看命令的输出. 请更新VSCode (
+									<code>CMD/CTRL + Shift + P</code> → "Update") 并确保您使用的是受支持的
 									shell: zsh, bash, fish, or PowerShell (<code>CMD/CTRL + Shift + P</code> →
 									"Terminal: Select Default Profile").{" "}
 									<a
 										href="https://github.com/cline/cline/wiki/Troubleshooting-%E2%80%90-Shell-Integration-Unavailable"
 										style={{ color: "inherit", textDecoration: "underline" }}>
-										Still having trouble?
+										仍有问题?
 									</a>
 								</div>
 							</div>
